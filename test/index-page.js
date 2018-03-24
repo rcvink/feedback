@@ -1,3 +1,5 @@
+process.env.NODE_ENV = 'test';
+
 const assert = require('assert');
 const Browser = require('zombie');
 const app = require('../src/app');
