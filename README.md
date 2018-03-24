@@ -52,9 +52,16 @@ We want the new site to use Origami.
 1. Wrote user stories for MVP, V2, and V3
 1. Researched technology used by FT to inform architecture decisions.
 1. Decided on technologies to use (see Decisions).
+1. Diagrammed proposed architecture of app.
 1. Setup the basic skeleton of the app.
+1. Installed and configured dependencies.
+1. Test-drove development starting with most basic user interactions.
 
 ## Testing
+
+## Automation
+
+## Architecture
 
 ## Decisions
 
