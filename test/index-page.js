@@ -30,4 +30,24 @@ describe('Index page', function() {
     browser.assert.element('form');
   });
 
+  describe("feedback form has a", function() {
+
+    it('very negative response', function() {
+      browser.assert.element('form input[id=very-unhappy]')
+    });
+
+    it('slightly negative response', function() {
+      browser.assert.element('form input[id=slightly-unhappy]')
+    });
+
+    it('slightly positive response', function() {
+      browser.assert.element('form input[id=slightly-happy]')
+    });
+
+    it('very positive response', function() {
+      browser.assert.element('form input[id=very-happy]')
+    });
+
+  });
+
 });
