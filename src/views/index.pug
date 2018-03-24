@@ -2,7 +2,7 @@ extends layout
 
 block content
   h1#question= 'Please rate our website:'
-  form#feedback
+  form#feedback(method='POST' action='/ratings')
     input#very-unhappy(type='image', src='/images/very-unhappy.png')
     input#slightly-unhappy(type='image', src='/images/slightly-unhappy.png')
     input#slightly-happy(type='image', src='/images/slightly-happy.png')
