@@ -50,4 +50,16 @@ describe('Index page', function() {
 
   });
 
+  describe('selecting a response', function() {
+
+    beforeEach(function(done) {
+      browser.pressButton('form input[id=very-happy]', done);
+    })
+
+    it('redirects the user', function() {
+      browser.assert.redirected();
+    });
+
+  });
+
 });
