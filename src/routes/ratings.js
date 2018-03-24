@@ -3,10 +3,10 @@ var router = express.Router();
 
 router.get('/', function(req, res) {
   res.render('ratings');
-})
+});
 
 router.post('/', function(req, res) {
-  res.redirect('/ratings')
+  res.redirect('/ratings');
 });
 
 module.exports = router;
