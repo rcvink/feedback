@@ -7,7 +7,32 @@ a {
   color: #00B7FF;
 }
 
-input {
+img {
   width: 100px;
   height: 100px;
+}
+
+button {
+  border: none;
+  border-radius: 48px;
+  padding: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#very-unhappy {
+  background-color: #eb212d;
+}
+
+#slightly-unhappy {
+  background-color: #ee7d7e;
+}
+
+#slightly-happy {
+  background-color: #97cb76;
+}
+
+#very-happy {
+  background-color: #6ebb4b;
 }
