@@ -3,7 +3,11 @@ extends layout
 block content
   h1#question= 'Please rate our website:'
   form#feedback(method='POST' action='/ratings')
-    input#very-unhappy(type='image', src='/images/very-unhappy.png')
-    input#slightly-unhappy(type='image', src='/images/slightly-unhappy.png')
-    input#slightly-happy(type='image', src='/images/slightly-happy.png')
-    input#very-happy(type='image', src='/images/very-happy.png')
+    button#very-unhappy(type='submit', name='rating', value=0)
+      img(src='/images/very-unhappy.png')
+    button#slightly-unhappy(type='submit', name='rating', value=1)
+      img(src='/images/slightly-unhappy.png')
+    button#slightly-happy(type='submit', name='rating', value=2)
+      img(src='/images/slightly-happy.png')
+    button#very-happy(type='submit', name='rating', value=3)
+      img(src='/images/very-happy.png')
