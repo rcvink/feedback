@@ -5,7 +5,7 @@
   "scripts": {
     "test": "mocha",
     "lint": "./node_modules/.bin/eslint ./src/**",
-    "start": "node ./bin/www"
+    "start": "node ./src/bin/www"
   },
   "dependencies": {
     "cookie-parser": "~1.4.3",
