@@ -23,7 +23,11 @@ describe('Index page', function() {
   });
 
   it('asks the user for feedback', function() {
-    browser.assert.text('h1', 'Please rate our website:')
+    browser.assert.text('h1', 'Please rate our website:');
+  });
+
+  it('has a feedback form', function() {
+    browser.assert.element('form');
   });
 
 });
