@@ -1,25 +1,10 @@
-process.env.NODE_ENV = 'test';
-
-const assert = require('assert');
 const Browser = require('zombie');
-const app = require('../src/app');
-const http = require('http');
-var mongoose = require('mongoose');
-const server = http.createServer(app);
-server.listen(4000);
-
-Browser.localhost('example.com', 4000);
 
 describe('Index page', function() {
   const browser = new Browser();
 
   before(function(done) {
     browser.visit('/', done);
-  });
-
-  after(function(done) {
-    mongoose.disconnect();
-    server.close(done);
   });
 
   it('loads successfully', function() {
