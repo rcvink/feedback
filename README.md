@@ -6,14 +6,16 @@ This was completed for the Financial Times Cloud Engineer tech test.
 
 ## Getting started
 
-To develop with this app:
+This section assumed you have [Node.js](https://nodejs.org/en/) and [MongoDB](https://docs.mongodb.com/manual/installation/) installed on your machine.
+
+As a developer:
 1. `git clone` this repository.
 1. `cd` into the cloned directory.
 1. `npm install` to install dependencies.
-1. `sudo service mongod start` to start mongod.
+1. `sudo service mongodb start` to start mongo.
 1. `npm test` to run tests.
 1. `npm run lint` to lint source code.
-1. `npm start` to run the app on port 3000.
+1. `npm run devstart` to run the app on port 3000 in development mode, or `npm start` to run the app normally.
 1. navigate to `localhost:3000` in the browser to use locally hosted app.
 
 ## User stories
@@ -54,18 +56,47 @@ We want the new site to use Origami.
 1. Researched technology used by FT to inform architecture decisions.
 1. Decided on technologies to use (see Decisions).
 1. Diagrammed proposed architecture of app.
-1. Setup the basic skeleton of the app.
-1. Installed and configured dependencies.
-1. Test-drove development starting with most basic user interactions.
+1. Setup the basic skeleton of the app using Express.
+1. Test-drove front-end functionality to allow user to provide a rating (first user story).
+1. Test-drove back-end functionality to store ratings in a database (second user story).
 
 ## Testing
 
+Development was driven by a combination of automated unit and end-to-end tests. These were written using [Mocha](https://mochajs.org/) (for assertions) and [Zombie](http://zombie.js.org/) (for browser automation). Tests can be run with `npm test`.
+
 ## Automation
+
+Besides the automated testing specified above, the following automation was used:
+- [ESLint](https://eslint.org/) for linting. Run `npm run lint` to see the results. If no errors are listed then all of the code passes.
+- [Nodemon](https://github.com/remy/nodemon) to automate restarting the application when changes are made in development.
+- npm scripts for starting and testing the app (`npm start` and `npm test` respectively), as is normal for Node apps.
 
 ## Architecture
 
-## Decisions
+## Basis of design
+
+I used this exercise as a learning experience - prior to this I had only created full stack websites using Ruby (with Sinatra or Rails) for the back-end. In order to learn as much as possible, I decided to write a full stack JavaScript app to improve my understanding of that language and the tools available for it.
+
+More specifically, the app uses the technologies below for the following reasons:
+- Node.js:
+  - as a learning exercise;
+  - it is used by FT.
+- Express:
+  - to save time (using the generator);
+  - for its popularity, as it is easier to find assistance online when I encountered a problem.
+- Mocha/Zombie and ESLint:
+  - for testing and linting automation (respectively);
+  - popularity in the wider community.
+- Mongoose:
+  - as a learning exercise;
+  - straightforward setup;
+  - compatibility with Express.
+- MongoDB:
+  - unified usage of JSON across the board to ease the CRUD process.
 
 ## Next steps
 
 ## Resources
+
+The following guides were used to aid in the development of this app:
+- [Express web framework tutorial (Mozilla web docs)](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs)
