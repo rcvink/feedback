@@ -8,15 +8,16 @@ var mongoose = require('mongoose');
 // set up default mongoose connection
 var mongoDB = 'mongodb://127.0.0.1:27017/ft_ratings';
 mongoose.connect(mongoDB);
-
-// get mongoose to use the global promise library
 mongoose.Promise = global.Promise;
-
-// get the default connection
 var db = mongoose.connection;
-
-// bind connection to error event
 db.on('error', console.error.bind(console, 'MongoDB connection error:'));
+
+// define schema
+var Schema = mongoose.Schema;
+var RatingSchema = new Schema({
+  a_rating: Number,
+  a_date: Date
+});
 
 // instantiate routers
 var indexRouter = require('./routes/index');
