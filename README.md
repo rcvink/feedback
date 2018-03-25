@@ -66,7 +66,9 @@ Development was driven by a combination of automated unit and end-to-end tests. 
 
 ## Automation
 
-Besides the automated testing specified above, the following automation was used:
+The following automation was used in the development of this app:
+- [Mocha](https://mochajs.org/) for automated test assertions.
+- [Zombie](http://zombie.js.org/) for browser automation. This permitted development using end-to-end feature tests.
 - [ESLint](https://eslint.org/) for linting. Run `npm run lint` to see the results. If no errors are listed then all of the code passes.
 - [Nodemon](https://github.com/remy/nodemon) to automate restarting the application when changes are made in development.
 - npm scripts for starting and testing the app (`npm start` and `npm test` respectively), as is normal for Node apps.
