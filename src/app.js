@@ -12,16 +12,6 @@ mongoose.Promise = global.Promise;
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 
-// define schema
-var Schema = mongoose.Schema;
-var RatingSchema = new Schema({
-  a_rating: Number,
-  a_date: Date
-});
-
-// compile model from schema
-var rating = mongoose.model('Rating', RatingSchema);
-
 // instantiate routers
 var indexRouter = require('./routes/index');
 var ratingsRouter = require('./routes/ratings');
