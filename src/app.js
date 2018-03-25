@@ -19,6 +19,9 @@ var RatingSchema = new Schema({
   a_date: Date
 });
 
+// compile model from schema
+var rating = mongoose.model('Rating', RatingSchema);
+
 // instantiate routers
 var indexRouter = require('./routes/index');
 var ratingsRouter = require('./routes/ratings');
