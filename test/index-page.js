@@ -4,6 +4,7 @@ const assert = require('assert');
 const Browser = require('zombie');
 const app = require('../src/app');
 const http = require('http');
+var mongoose = require('mongoose');
 const server = http.createServer(app);
 server.listen(4000);
 
@@ -17,6 +18,7 @@ describe('Index page', function() {
   });
 
   after(function(done) {
+    mongoose.connection.close();
     server.close(done);
   });
 
