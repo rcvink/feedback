@@ -10,6 +10,7 @@ To develop with this app:
 1. `git clone` this repository.
 1. `cd` into the cloned directory.
 1. `npm install` to install dependencies.
+1. `sudo service mongod start` to start mongod.
 1. `npm test` to run tests.
 1. `npm run lint` to lint source code.
 1. `npm start` to run the app on port 3000.
