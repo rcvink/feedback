@@ -35,19 +35,19 @@ describe('Index page', function() {
   describe("feedback form has a", function() {
 
     it('very negative response', function() {
-      browser.assert.element('form input[id=very-unhappy]')
+      browser.assert.element('button[id=very-unhappy]')
     });
 
     it('slightly negative response', function() {
-      browser.assert.element('form input[id=slightly-unhappy]')
+      browser.assert.element('button[id=slightly-unhappy]')
     });
 
     it('slightly positive response', function() {
-      browser.assert.element('form input[id=slightly-happy]')
+      browser.assert.element('button[id=slightly-happy]')
     });
 
     it('very positive response', function() {
-      browser.assert.element('form input[id=very-happy]')
+      browser.assert.element('button[id=very-happy]')
     });
 
   });
@@ -55,7 +55,7 @@ describe('Index page', function() {
   describe('selecting a response', function() {
 
     beforeEach(function(done) {
-      browser.pressButton('form input[id=very-happy]', done);
+      browser.pressButton('button[id=very-happy]', done);
     })
 
     it('redirects the user', function() {
