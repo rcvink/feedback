@@ -4,18 +4,25 @@ This repository stores a website that asks for and stores a simple rating score 
 
 This was completed for the Financial Times Cloud Engineer tech test.
 
+This README outlines the app usage, specification, the process used to develop the app and proposed future steps.
+
 ## Getting started
+
+### As a user
+
+The website is deployed on Heroku [here](https://ft-feedback.herokuapp.com/).
+
+### As a developer
 
 This section assumed you have [Node.js](https://nodejs.org/en/) and [MongoDB](https://docs.mongodb.com/manual/installation/) installed on your machine.
 
-As a developer:
 1. `git clone` this repository.
 1. `cd` into the cloned directory.
 1. `npm install` to install dependencies.
 1. `sudo service mongodb start` to start mongo.
 1. `npm test` to run tests.
 1. `npm run lint` to lint source code.
-1. `npm run devstart` to run the app on port 3000 in development mode, or `npm start` to run the app normally.
+1. `npm run devstart` to run the app locally in development mode, otherwise `npm start`.
 1. navigate to `localhost:3000` in the browser to use locally hosted app.
 
 ## User stories
@@ -59,6 +66,8 @@ We want the new site to use Origami.
 1. Setup the basic skeleton of the app using Express.
 1. Test-drove front-end functionality to allow user to provide a rating (first user story).
 1. Test-drove back-end functionality to store ratings in a database (second user story).
+1. Researched deployment options and decided on Heroku for convenience given the limited time frame in which this exercise was carried out.
+1. Deployed app on Heroku (third user story).
 
 ## Testing
 
@@ -74,6 +83,12 @@ The following automation was used in the development of this app:
 - npm scripts for starting and testing the app (`npm start` and `npm test` respectively), as is normal for Node apps.
 
 ## Architecture
+
+The architecture of the app is shown below:
+
+```
+TO-DO: Diagram of Architecture
+```
 
 ## Basis of design
 
@@ -96,7 +111,24 @@ More specifically, the app uses the technologies below for the following reasons
 - MongoDB:
   - unified usage of JSON across the board to ease the CRUD process.
 
+## Deployment
+
+The app was deployed to Heroku instead of any alternatives primarily for convenience.
+
+At a future stage, the option of deploying this app using an IaaS should be explored. This would allow greater flexibility which may be beneficial if the app were scaled up to handle greater traffic.
+
 ## Next steps
+
+The following possibilities would be considered in future if development of this app were continued:
+
+- Use of Continuous Integration e.g. Travis CI to ensure problems are detected early.
+- Deployment via a more flexible option e.g. IaaS.
+- Extraction of router responsibilities to controller modules to improve app's adherence to SOLID.
+- Increased test coverage.
+- Rewrite all code to ES6 standards, using a transpiler such as Babel for production.
+- Use of a bundler e.g. Webpack to store modules in a dependency graph and minify assets.
+- True separation of front-end and back-end apps. Currently the back-end serves the front-end HTML via Pug, Express' default view engine.
+- Separated front-end and back-end apps running in containers.
 
 ## Resources
 
