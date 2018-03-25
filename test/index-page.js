@@ -18,7 +18,7 @@ describe('Index page', function() {
   });
 
   after(function(done) {
-    mongoose.diconnect();
+    mongoose.disconnect();
     server.close(done);
   });
 
