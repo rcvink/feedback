@@ -25,8 +25,8 @@ describe('Confirmation page', function() {
     browser.assert.text('p', `Your rating of 3 out of 3 was stored on ${mockDate}`);
   })
 
-  it('has a back button', function() {
-    browser.assert.element('button[id=back]');
+  it('has a back link ', function() {
+    browser.assert.element('a[id=back]');
   });
 
 });

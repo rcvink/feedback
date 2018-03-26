@@ -15,8 +15,8 @@ describe('All ratings page', function() {
     browser.assert.element('table[id=ratings-list]')
   });
 
-  it('has a back button', function() {
-    browser.assert.element('button[id=back]');
+  it('has a back link', function() {
+    browser.assert.element('a[id=back]');
   });
 
   describe('within table of ratings', function() {

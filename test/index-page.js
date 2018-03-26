@@ -15,8 +15,8 @@ describe('Index page', function() {
     browser.assert.text('h1', 'Please rate our website:');
   });
 
-  it('has a button to list of ratings', function() {
-    browser.assert.element('button[id=to-ratings]');
+  it('has link to all ratings', function() {
+    browser.assert.element('a[id=ratings]');
   });
 
   it('has a feedback form', function() {
