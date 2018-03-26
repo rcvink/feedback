@@ -68,10 +68,56 @@ We want the new site to use Origami.
 1. Test-drove back-end functionality to store ratings in a database (second user story).
 1. Researched deployment options and decided on Heroku for convenience given the limited time frame in which this exercise was carried out.
 1. Deployed app on Heroku (third user story).
+1. Test-drove full stack functionality to retrieve all ratings from the database and list them on a page (fourth user story).
 
 ## Testing
 
 Development was driven by a combination of automated unit and end-to-end tests. These were written using [Mocha](https://mochajs.org/) (for assertions) and [Zombie](http://zombie.js.org/) (for browser automation). Tests can be run with `npm test`.
+
+The test output is shown below:
+
+```
+roland@roland-laptop:~/Projects/ft$ npm test
+
+> ft@0.0.0 test /home/roland/Projects/ft
+> mocha
+
+
+
+  All ratings page
+    ✓ loads successfully
+    ✓ has a table of ratings
+    ✓ has a back button
+    within table of ratings
+      ✓ has a score header
+      ✓ has a date header
+
+  Index page
+    ✓ loads successfully
+    ✓ asks the user for feedback
+    ✓ has a button to list of ratings
+    ✓ has a feedback form
+    feedback form has a
+      ✓ very negative response
+      ✓ slightly negative response
+      ✓ slightly positive response
+      ✓ very positive response
+    selecting a response
+      ✓ redirects the user
+
+  Confirmation page
+    ✓ loads successfully
+    ✓ thanks the user for their feedback
+    ✓ states the rating's score and date
+    ✓ has a back button
+
+  Rating
+    ✓ has a rating score
+    ✓ has date of creation
+
+
+  20 passing (1s)
+```
 
 ## Automation
 
