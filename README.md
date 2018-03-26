@@ -87,11 +87,11 @@ So that our sites have a common aesthetic.
 1. Wrote user stories for MVP, V2, and V3
 1. Researched technology used by FT to inform architecture decisions.
 1. Decided on technologies to use (see [Basis of design](#basis-of-design)).
-1. Diagrammed proposed architecture of app.
+1. Diagrammed proposed architecture of app (see [Architecture](#architecture)).
 1. Setup the basic skeleton of the app using Express.
 1. Test-drove front-end functionality to allow user to provide a rating (first user story, MVP).
 1. Test-drove back-end functionality to store ratings in a database (second user story, MVP).
-1. Researched deployment options and decided on Heroku.
+1. Researched deployment options and decided on Heroku (see [Deployment](#deployment)).
 1. Deployed app on Heroku (third user story, MVP).
 1. Test-drove full stack functionality to retrieve all ratings from the database and list them on a page (V2 user story).
 1. Refactored/extracted to improve adherence to SOLID principles, using existing tests to ensure functionality was not disrupted.
@@ -103,6 +103,8 @@ The architecture of the app is shown below:
 ![architecture diagram](https://github.com/rcvink/ft/blob/master/docs/images/FT-architecture.png?raw=true)
 
 ## Basis of design
+
+After digesting the problem, I decided that a full stack website was required - a front-end so that users could provide feedback, and a back-end so that feedback could be stored and retrieved.
 
 I used this exercise as a learning experience - prior to this I had only created full stack websites using Ruby (with Sinatra or Rails) for the back-end. In order to learn as much as possible, I decided to write a full stack JavaScript app to improve my understanding of that language and the tools available for it.
 
