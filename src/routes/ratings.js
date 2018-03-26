@@ -9,9 +9,9 @@ router.get('/', function(req, res) {
         res.render('error', { error: 'hello' });
       } else {
         res.render('ratings', { ratingsList: ratingsList });
-      };
+      }
     });
-})
+});
 
 router.post('/', function(req, res) {
   var rating = new Rating({
@@ -28,7 +28,7 @@ router.get('/:ratingId', function(req, res) {
       res.render('error', { error: err });
     } else {
       res.render('confirmation', { rating: rating.rating, date: rating.created_at });
-    };
+    }
   });
 });
 
