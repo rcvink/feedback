@@ -2,6 +2,17 @@ var express = require('express');
 var Rating = require('../models/rating');
 var router = express.Router();
 
+router.get('/', function(req, res) {
+  Rating.find({}, 'rating created_at')
+    .exec(function (err, ratingsList) {
+      if (err) {
+        res.render('error', { error: 'hello' });
+      } else {
+        res.render('ratings', { ratingsList: ratingsList });
+      };
+    });
+})
+
 router.post('/', function(req, res) {
   var rating = new Rating({
     rating: req.body.rating,

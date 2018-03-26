@@ -1,6 +1,16 @@
 extends layout
 
 block content
-  h1= 'Thanks for your feedback.'
+  h1= 'Ratings history:'
+  
+  table#ratings-list
+    tr
+      th#score-header Score
+      th#date-header Date
+    each rating in ratingsList.reverse()
+      tr
+        td #{rating.rating}
+        td #{rating.created_at}
+      
   form(action='/')
     button#back(class='navigation-button', type='submit') Go Back
