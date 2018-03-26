@@ -6,6 +6,19 @@ This was completed for the Financial Times Cloud Engineer tech test.
 
 This README outlines the app usage, specification, the process used to develop the app and proposed future steps.
 
+## Contents
+
+- [Getting started](#getting-started)
+- [User stories](#user-stories)
+- [Approach](#approach)
+- [Architecture](#architecture)
+- [Basis of design](#basis-of-design)
+- [Testing](#testing)
+- [Automation](#automation)
+- [Deployment](#deployment)
+- [Next steps](#next-steps)
+- [Resources](#resources)
+
 ## Getting started
 
 ### As a user
@@ -30,30 +43,30 @@ This section assumed you have [Node.js](https://nodejs.org/en/) and [MongoDB](ht
 MVP:
 ```
 As an FT reader,
-So that I can give feedback on my experience,
-I want to rate ft.com.
+I want to rate ft.com
+So that I can give feedback on my experience.
 
 As the FT,
-So that user feedback can be actioned,
-We want ratings to be stored.
+We want ratings to be stored
+So that user feedback can be actioned.
 
 As the FT,
-So that any user can give feedback,
 We want the site to be deployed to the cloud (e.g. AWS, Google, Heroku)
+So that any user can give feedback.
 ```
 
 V2:
 ```
 As the FT,
-So that we can assess feedback,
-We want to view all of the ratings.
+We want to view all of the ratings
+So that we can assess feedback for our website.
 ```
 
 V3:
 ```
 As the FT,
-So that our sites have a common aesthetic,
-We want the new site to use Origami.
+We want the new site to use Origami
+So that our sites have a common aesthetic.
 ```
 
 ## Approach
@@ -61,7 +74,7 @@ We want the new site to use Origami.
 1. Digested the exercise and wrote this README.
 1. Wrote user stories for MVP, V2, and V3
 1. Researched technology used by FT to inform architecture decisions.
-1. Decided on technologies to use (see Decisions).
+1. Decided on technologies to use (see [Basis of design](#basis-of-design)).
 1. Diagrammed proposed architecture of app.
 1. Setup the basic skeleton of the app using Express.
 1. Test-drove front-end functionality to allow user to provide a rating (first user story, MVP).
@@ -70,6 +83,38 @@ We want the new site to use Origami.
 1. Deployed app on Heroku (third user story, MVP).
 1. Test-drove full stack functionality to retrieve all ratings from the database and list them on a page (V2 user story).
 1. Refactored/extracted to improve adherence to SOLID principles, using existing tests to ensure functionality was not disrupted.
+
+## Architecture
+
+The architecture of the app is shown below:
+
+```
+TO-DO: Diagram of Architecture
+```
+
+## Basis of design
+
+I used this exercise as a learning experience - prior to this I had only created full stack websites using Ruby (with Sinatra or Rails) for the back-end. In order to learn as much as possible, I decided to write a full stack JavaScript app to improve my understanding of that language and the tools available for it.
+
+The disadvantage to this was that it took me longer to set up the various parts of the app, leaving me with less time to improve code quality and implement user stories.
+
+More specifically, the app uses the technologies below for the following reasons:
+- Node.js:
+  - as a learning exercise;
+  - it is used by FT.
+- Express:
+  - to save time (using the generator);
+  - for its popularity, as it is easier to find assistance online when I encountered a problem.
+- Mocha/Zombie and ESLint:
+  - for testing and linting automation (respectively);
+  - popularity in the wider community;
+  - ease of setting up.
+- Mongoose:
+  - as a learning exercise;
+  - ease of setting up;
+  - compatibility with Express.
+- MongoDB:
+  - unified usage of JSON across the board to ease the CRUD process.
 
 ## Testing
 
@@ -140,38 +185,6 @@ roland@roland-laptop:~/Projects/ft$ npm run lint
 > ft@0.0.0 lint /home/roland/Projects/ft
 > eslint ./src/**
 ```
-
-## Architecture
-
-The architecture of the app is shown below:
-
-```
-TO-DO: Diagram of Architecture
-```
-
-## Basis of design
-
-I used this exercise as a learning experience - prior to this I had only created full stack websites using Ruby (with Sinatra or Rails) for the back-end. In order to learn as much as possible, I decided to write a full stack JavaScript app to improve my understanding of that language and the tools available for it.
-
-The disadvantage to this was that it took me longer to set up the various parts of the app, leaving me with less time to improve code quality and implement user stories.
-
-More specifically, the app uses the technologies below for the following reasons:
-- Node.js:
-  - as a learning exercise;
-  - it is used by FT.
-- Express:
-  - to save time (using the generator);
-  - for its popularity, as it is easier to find assistance online when I encountered a problem.
-- Mocha/Zombie and ESLint:
-  - for testing and linting automation (respectively);
-  - popularity in the wider community;
-  - ease of setting up.
-- Mongoose:
-  - as a learning exercise;
-  - ease of setting up;
-  - compatibility with Express.
-- MongoDB:
-  - unified usage of JSON across the board to ease the CRUD process.
 
 ## Deployment
 
