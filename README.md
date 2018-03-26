@@ -133,11 +133,10 @@ roland@roland-laptop:~/Projects/ft$ npm test
 > mocha
 
 
-
   All ratings page
     ✓ loads successfully
     ✓ has a table of ratings
-    ✓ has a back button
+    ✓ has a back link
     within table of ratings
       ✓ has a score header
       ✓ has a date header
@@ -145,7 +144,7 @@ roland@roland-laptop:~/Projects/ft$ npm test
   Index page
     ✓ loads successfully
     ✓ asks the user for feedback
-    ✓ has a button to list of ratings
+    ✓ has link to all ratings
     ✓ has a feedback form
     feedback form has a
       ✓ very negative response
@@ -159,7 +158,7 @@ roland@roland-laptop:~/Projects/ft$ npm test
     ✓ loads successfully
     ✓ thanks the user for their feedback
     ✓ states the rating's score and date
-    ✓ has a back button
+    ✓ has a back link
 
   Rating
     ✓ has a rating score
