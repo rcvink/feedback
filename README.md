@@ -33,9 +33,9 @@ As an FT reader,
 So that I can give feedback on my experience,
 I want to rate ft.com.
 
-As an FT reader,
-So that my feedback can be actioned,
-I want my rating to be stored.
+As the FT,
+So that user feedback can be actioned,
+We want ratings to be stored.
 
 As the FT,
 So that any user can give feedback,
@@ -46,7 +46,7 @@ V2:
 ```
 As the FT,
 So that we can assess feedback,
-We want to view the ratings.
+We want to view all of the ratings.
 ```
 
 V3:
@@ -64,15 +64,22 @@ We want the new site to use Origami.
 1. Decided on technologies to use (see Decisions).
 1. Diagrammed proposed architecture of app.
 1. Setup the basic skeleton of the app using Express.
-1. Test-drove front-end functionality to allow user to provide a rating (first user story).
-1. Test-drove back-end functionality to store ratings in a database (second user story).
-1. Researched deployment options and decided on Heroku for convenience given the limited time frame in which this exercise was carried out.
-1. Deployed app on Heroku (third user story).
-1. Test-drove full stack functionality to retrieve all ratings from the database and list them on a page (fourth user story).
+1. Test-drove front-end functionality to allow user to provide a rating (first user story, MVP).
+1. Test-drove back-end functionality to store ratings in a database (second user story, MVP).
+1. Researched deployment options and decided on Heroku.
+1. Deployed app on Heroku (third user story, MVP).
+1. Test-drove full stack functionality to retrieve all ratings from the database and list them on a page (V2 user story).
+1. Refactored/extracted to improve adherence to SOLID principles, using existing tests to ensure functionality was not disrupted.
 
 ## Testing
 
-Development was driven by a combination of automated unit and end-to-end tests. These were written using [Mocha](https://mochajs.org/) (for assertions) and [Zombie](http://zombie.js.org/) (for browser automation). Tests can be run with `npm test`.
+Development was driven by a combination of automated unit and end-to-end (e2e) tests. These were written using [Mocha](https://mochajs.org/) (for assertions) and [Zombie](http://zombie.js.org/) (for browser automation). Tests can be run with `npm test`.
+
+The testing strategy was as follows:
+- Models (of which there is one, `Rating`) tested using unit tests.
+- Views tested using e2e/feature tests.
+- Persistence to database tested using e2e/feature tests. At a later stage, unit tests should be written using a mock database to test interactions with database.
+- Controller and routers tested using e2e/feature tests. At a later stage, unit tests should be written to test methods on the controller and router.
 
 The test output is shown below:
 
@@ -124,9 +131,15 @@ roland@roland-laptop:~/Projects/ft$ npm test
 The following automation was used in the development of this app:
 - [Mocha](https://mochajs.org/) for automated test assertions.
 - [Zombie](http://zombie.js.org/) for browser automation. This permitted development using end-to-end feature tests.
-- [ESLint](https://eslint.org/) for linting. Run `npm run lint` to see the results. If no errors are listed then all of the code passes.
 - [Nodemon](https://github.com/remy/nodemon) to automate restarting the application when changes are made in development.
 - npm scripts for starting and testing the app (`npm start` and `npm test` respectively), as is normal for Node apps.
+- [ESLint](https://eslint.org/) for linting. Run `npm run lint` to see the results. If no errors are listed then all of the code passes e.g.
+```
+roland@roland-laptop:~/Projects/ft$ npm run lint
+
+> ft@0.0.0 lint /home/roland/Projects/ft
+> eslint ./src/**
+```
 
 ## Architecture
 
@@ -140,6 +153,8 @@ TO-DO: Diagram of Architecture
 
 I used this exercise as a learning experience - prior to this I had only created full stack websites using Ruby (with Sinatra or Rails) for the back-end. In order to learn as much as possible, I decided to write a full stack JavaScript app to improve my understanding of that language and the tools available for it.
 
+The disadvantage to this was that it took me longer to set up the various parts of the app, leaving me with less time to improve code quality and implement user stories.
+
 More specifically, the app uses the technologies below for the following reasons:
 - Node.js:
   - as a learning exercise;
@@ -149,10 +164,11 @@ More specifically, the app uses the technologies below for the following reasons
   - for its popularity, as it is easier to find assistance online when I encountered a problem.
 - Mocha/Zombie and ESLint:
   - for testing and linting automation (respectively);
-  - popularity in the wider community.
+  - popularity in the wider community;
+  - ease of setting up.
 - Mongoose:
   - as a learning exercise;
-  - straightforward setup;
+  - ease of setting up;
   - compatibility with Express.
 - MongoDB:
   - unified usage of JSON across the board to ease the CRUD process.
@@ -167,16 +183,19 @@ At a future stage, the option of deploying this app using an IaaS should be expl
 
 The following possibilities would be considered in future if development of this app were continued:
 
+- Styling using Origami components (V3 user story).
 - Use of Continuous Integration e.g. Travis CI to ensure problems are detected early.
 - Deployment via a more flexible option e.g. IaaS.
-- Extraction of router responsibilities to controller modules to improve app's adherence to SOLID.
-- Increased test coverage.
-- Rewrite all code to ES6 standards, using a transpiler such as Babel for production.
+- Increased test coverage (see Testing)
+- Hide functionality to view all ratings behind some form of authentification. While this was not specified in the requirements, presumably FT would not want all users to be able to see all feedback.
+- Rewrite all code to ES6 standards for futureproofing, using a transpiler such as Babel for production.
 - Use of a bundler e.g. Webpack to store modules in a dependency graph and minify assets.
 - True separation of front-end and back-end apps. Currently the back-end serves the front-end HTML via Pug, Express' default view engine.
-- Separated front-end and back-end apps running in containers.
+- Containerised front-end and back-end apps e.g. using Docker.
 
 ## Resources
 
-The following guides were used to aid in the development of this app:
+The following guide was used to aid in the development of this app:
 - [Express web framework tutorial (Mozilla web docs)](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs)
+
+Additionally, the 'getting started' documentation for Express, Mocha, Zombie and Mongoose provided essential assistance.
