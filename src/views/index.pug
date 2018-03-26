@@ -3,11 +3,11 @@ extends layout
 block content
   h1#question= 'Please rate our website:'
   form#feedback(method='POST' action='/ratings')
-    button#very-unhappy(type='submit', name='rating', value=0)
+    button#very-unhappy(class='feedback-button', type='submit', name='rating', value=0)
       img(src='/images/very-unhappy.png')
-    button#slightly-unhappy(type='submit', name='rating', value=1)
+    button#slightly-unhappy(class='feedback-button', name='rating', value=1)
       img(src='/images/slightly-unhappy.png')
-    button#slightly-happy(type='submit', name='rating', value=2)
+    button#slightly-happy(class='feedback-button', name='rating', value=2)
       img(src='/images/slightly-happy.png')
-    button#very-happy(type='submit', name='rating', value=3)
+    button#very-happy(class='feedback-button', name='rating', value=3)
       img(src='/images/very-happy.png')
