@@ -25,6 +25,18 @@ This README outlines the app usage, specification, the process used to develop t
 
 The website is deployed on Heroku [here](https://ft-feedback.herokuapp.com/).
 
+The index page asks for the user's feedback:
+
+![index-page](https://github.com/rcvink/ft/blob/master/docs/images/index-page.png?raw=true)
+
+After submitting feedback, the user is taken to a confirmation page:
+
+![confirmation-page](https://github.com/rcvink/ft/blob/master/docs/images/confirmation-page.png?raw=true)
+
+There is also a page to see a history of feedback left by users:
+
+![history-page](https://github.com/rcvink/ft/blob/master/docs/images/history-page.png?raw=true)
+
 ### As a developer
 
 This section assumed you have [Node.js](https://nodejs.org/en/) and [MongoDB](https://docs.mongodb.com/manual/installation/) installed on your machine.
