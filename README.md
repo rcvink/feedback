@@ -176,8 +176,9 @@ roland@roland-laptop:~/Projects/ft$ npm test
 The following automation was used in the development of this app:
 - [Mocha](https://mochajs.org/) for automated test assertions.
 - [Zombie](http://zombie.js.org/) for browser automation. This permitted development using end-to-end feature tests.
-- [Nodemon](https://github.com/remy/nodemon) to automate restarting the application when changes are made in development.
+- [Nodemon](https://github.com/remy/nodemon) to automate restarting the application when changes are made in development. `npm run devstart` to use this.
 - npm scripts for starting and testing the app (`npm start` and `npm test` respectively), as is normal for Node apps.
+- [Mocha-prepare](https://www.npmjs.com/package/mocha-prepare) to automate test set-up and teardown.
 - [ESLint](https://eslint.org/) for linting. Run `npm run lint` to see the results. If no errors are listed then all of the code passes e.g.
 ```
 roland@roland-laptop:~/Projects/ft$ npm run lint
