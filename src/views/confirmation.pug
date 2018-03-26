@@ -1,0 +1,7 @@
+extends layout
+
+block content
+  h1= 'Thanks for your feedback.'
+  p Your rating of #{rating} out of 3 was stored on #{date}
+  form(action='/')
+    button#back(class='navigation-button', type='submit') Go Back
