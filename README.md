@@ -88,9 +88,7 @@ So that our sites have a common aesthetic.
 
 The architecture of the app is shown below:
 
-```
-TO-DO: Diagram of Architecture
-```
+![architecture diagram](https://github.com/rcvink/ft/blob/master/docs/images/FT-architecture.png?raw=true)
 
 ## Basis of design
 
