@@ -1,8 +1,6 @@
-# Financial Times Cloud Engineer Technical Exercise
+# Feedback
 
-This repository stores a website that asks for and stores a simple rating score for using [ft.com](https://www.ft.com/).
-
-This was completed for the Financial Times Cloud Engineer tech test.
+This repository stores a simple website that asks for and stores a simple rating score out of 4.
 
 This README outlines the app usage, specification, the process used to develop the app and proposed future steps.
 
@@ -54,38 +52,27 @@ This section assumed you have [Node.js](https://nodejs.org/en/) and [MongoDB](ht
 
 MVP:
 ```
-As an FT reader,
-I want to rate ft.com
+As a user,
+I want to rate a website
 So that I can give feedback on my experience.
 
-As the FT,
-We want ratings to be stored
+As a website owner,
+I want ratings to be stored
 So that user feedback can be actioned.
 
-As the FT,
+As a website owner,
 We want the site to be deployed to the cloud (e.g. AWS, Google, Heroku)
 So that any user can give feedback.
-```
 
-V2:
-```
-As the FT,
+As a website owner,
 We want to view all of the ratings
 So that we can assess feedback for our website.
-```
-
-V3:
-```
-As the FT,
-We want the new site to use Origami
-So that our sites have a common aesthetic.
 ```
 
 ## Approach
 
 1. Digested the exercise and wrote this README.
-1. Wrote user stories for MVP, V2, and V3
-1. Researched technology used by FT to inform architecture decisions.
+1. Wrote user stories.
 1. Decided on technologies to use (see [Basis of design](#basis-of-design)).
 1. Diagrammed proposed architecture of app (see [Architecture](#architecture)).
 1. Setup the basic skeleton of the app using Express.
@@ -93,7 +80,7 @@ So that our sites have a common aesthetic.
 1. Test-drove back-end functionality to store ratings in a database (second user story, MVP).
 1. Researched deployment options and decided on Heroku (see [Deployment](#deployment)).
 1. Deployed app on Heroku (third user story, MVP).
-1. Test-drove full stack functionality to retrieve all ratings from the database and list them on a page (V2 user story).
+1. Test-drove full stack functionality to retrieve all ratings from the database and list them on a page (fourth user story, MVP).
 1. Refactored/extracted to improve adherence to SOLID principles, using existing tests to ensure functionality was not disrupted.
 
 ## Architecture
@@ -113,7 +100,6 @@ The disadvantage to this was that it took me longer to set up the various parts 
 More specifically, the app uses the technologies below for the following reasons:
 - Node.js:
   - as a learning exercise;
-  - it is used by FT.
 - Express:
   - to save time (using the generator);
   - for its popularity, as it is easier to find assistance online when I encountered a problem.
@@ -208,7 +194,6 @@ At a future stage, the option of deploying this app using an IaaS should be expl
 
 The following possibilities would be considered in future if development of this app were continued:
 
-- Styling using Origami components (V3 user story).
 - Use of Continuous Integration e.g. Travis CI to ensure problems are detected early.
 - Deployment via a more flexible option e.g. IaaS.
 - Increased test coverage (see Testing)
